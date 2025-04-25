@@ -1,7 +1,7 @@
 package com.ms.report.api.repository.entity
 
+
 import com.ms.report.api.repository.entity.enums.ReportCategory
-import com.ms.report.api.repository.entity.enums.ReportStatus
 import com.ms.report.api.repository.entity.enums.ReportType
 import jakarta.persistence.*
 import java.time.LocalDateTime
@@ -25,10 +25,6 @@ data class ReportEntity(
     val type: ReportType,
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "status")
-    val status: ReportStatus = ReportStatus.PENDING,
-
-    @Enumerated(EnumType.STRING)
     @Column(name = "category")
     val category: ReportCategory,
 
@@ -39,5 +35,6 @@ data class ReportEntity(
     val updatedAt: LocalDateTime = LocalDateTime.now(),
 
     @Column(name = "s3_location")
-    val s3Locatation: String? = null
+    val s3Location: String? = null
+
 )

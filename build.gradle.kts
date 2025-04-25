@@ -23,7 +23,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	implementation("com.report.utils:report-utils:1.0-SNAPSHOT")
+
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib")
@@ -31,8 +31,11 @@ dependencies {
 
 	implementation("software.amazon.awssdk:sqs:2.21.0")
 	implementation("software.amazon.awssdk:s3:2.21.0")
+	implementation("software.amazon.awssdk:core:2.21.0")
 
 //	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
+
+	implementation("com.report.utils:report-utils:1.0-SNAPSHOT")
 
 	implementation("net.logstash.logback:logstash-logback-encoder:7.4")
 

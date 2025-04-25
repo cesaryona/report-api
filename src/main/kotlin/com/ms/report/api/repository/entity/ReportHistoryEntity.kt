@@ -1,6 +1,7 @@
 package com.ms.report.api.repository.entity
 
 import com.fasterxml.jackson.annotation.JsonIgnore
+import com.ms.report.api.repository.entity.enums.ReportStatus
 import jakarta.persistence.*
 import java.time.LocalDateTime
 import java.util.*
@@ -19,6 +20,10 @@ data class ReportHistoryEntity(
 
     @Column(name = "message")
     val message: String,
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status")
+    val status: ReportStatus,
 
     @Column(name = "created_at")
     val createdAt: LocalDateTime = LocalDateTime.now()

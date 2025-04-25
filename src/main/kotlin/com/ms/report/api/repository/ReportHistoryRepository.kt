@@ -8,5 +8,5 @@ import java.util.*
 @Repository
 interface ReportHistoryRepository : JpaRepository<ReportHistoryEntity, UUID> {
 
-
+    fun findByReportId(reportId: UUID): List<ReportHistoryEntity>
 }
